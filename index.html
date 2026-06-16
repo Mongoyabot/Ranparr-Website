@@ -46,10 +46,35 @@
             padding: 1rem 0;
         }
 
+        /* Header Logo Area */
+        .header-logo-area {
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+
+        .logo-parrot {
+            height: 100px;
+            width: auto;
+            margin-right: -0.6rem;
+        }
+
         .logo {
             font-size: 28px;
             font-weight: bold;
             color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            justify-content: flex-start;
+        }
+
+        .logo-text {
+            order: 2;
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 32px;
+            letter-spacing: -1px;
         }
 
         nav ul {
@@ -104,7 +129,8 @@
         }
 
         .hero-image {
-            max-width: 100%;
+            max-width: 95%;
+            width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -379,7 +405,10 @@
     <header>
         <div class="container">
             <div class="header-top">
-                <div class="logo">Ranparr, Inc.</div>
+                <div class="logo">
+                    <img src="parrot-white.png" alt="Ranparr parrot logo" class="logo-parrot">
+                    <span class="logo-text">Ranparr, Inc.</span>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="#" onclick="showSection('home'); return false;">Home</a></li>
@@ -401,7 +430,6 @@
             <div class="hero">
                 <div class="hero-content">
                     <div>
-                        <h1>SERVICE IS OUR<br>MIDDLE NAME</h1>
                         <p>Quality Fuel Solutions for Dallas/Fort Worth Since 1923</p>
                     </div>
                     <img src="Custom-Banner.jpg" alt="Ranparr fuel tank truck" class="hero-image">
@@ -461,10 +489,18 @@
                 Since 1923, the Parrott family has been a leading supplier of petroleum products to end users in the Dallas/Fort Worth metroplex, even before there was a "metroplex."
             </p>
 
-            <h3>Our Mission</h3>
+            <h3>Our Mission & Values</h3>
             <p>
                 At Ranparr, Inc., our focus is on being the best supplier of quality gasoline and diesel fuels with the best service possible. We are committed to reliability, quality, and customer satisfaction in every transaction.
             </p>
+            <div class="info-box">
+                <p>
+                    <strong>Vision:</strong> To provide the highest quality of sales and service of on-site fuel to our valued customers.
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Mission:</strong> To make every customer feel as though they receive the utmost care, have the highest confidence in, and enjoy the most benefit by placing their trust in us. We strive to provide our customers with quality fuels at fair and reasonable prices, while giving excellent customer service time after time—on time, every time.
+                </p>
+            </div>
 
             <h3>Why Choose Us?</h3>
             <div class="info-box">
@@ -476,6 +512,22 @@
                     <li>Reliable, consistent supply you can count on</li>
                 </ul>
             </div>
+
+            <h3>Our History</h3>
+            <p>
+                Prior to World War I, J.N. "Polly" Parrott was working in Dallas for The Texas Company. After serving in World War I, he returned and became a consignee for most parts of Texas west of Dallas. In 1923, he married Ruth Alderman, settled in Dallas, and formed Consumers Gasoline Company, initially peddling gasolines and oils from his own truck.
+            </p>
+            <p>
+                In 1951, his son G.N. "Polly" Parrott married Jo Medford and joined the firm. Later, sons Scott and Randy were born. J.N. and G.N. formed new companies: Oils, Inc. and Parrott Oil Corporation. In the early 1970s, these companies merged into Parrott Oil Corp. The company experienced losses when J.N. passed in 1989, Ruth in 1990, and Scott in 1991.
+            </p>
+            <p>
+                Ranparr, Inc. was originally formed as an automotive equipment company in 1988. When Parrott Oil Corp. sold its assets in 1993, Ranparr, Inc. began selling motor fuels under the direction of Randy Parrott as President. His children Jaime and Justin now work with the company to continue family traditions into the future. Today, Ranparr, Inc. serves over 40 cities in Texas.
+            </p>
+            <p style="font-style: italic; font-weight: bold; margin-top: 1rem;">
+                Come be a part of our history!
+            </p>
+
+            <h3>Why Choose Us?</h3>
         </section>
 
         <!-- Operations Section -->
@@ -510,6 +562,64 @@
                     Our commitment to quality means you receive premium gasoline and diesel fuels that keep your fleet running efficiently. We maintain strict quality standards and reliable delivery schedules to minimize downtime for your operations.
                 </p>
             </div>
+
+            <h3>Fuel Division</h3>
+            <p>
+                Our Fuel Division specializes in providing high-quality petroleum products and on-site fuel system solutions designed to meet your operational needs.
+            </p>
+
+            <h4 style="color: #d32f2f; margin-top: 1rem; margin-bottom: 0.5rem;">Products We Offer:</h4>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li>Unleaded Gasoline</li>
+                <li>Midgrade Gasoline</li>
+                <li>Premium Gasoline</li>
+                <li>Ultra-Low Sulfur Diesel - Clear</li>
+                <li>Ultra-Low Sulfur Diesel - Dyed</li>
+            </ul>
+
+            <h4 style="color: #d32f2f; margin-top: 1rem; margin-bottom: 0.5rem;">Benefits of On-Site Fuel Systems:</h4>
+            <div class="info-box">
+                <ol>
+                    <li><strong>Inventory Control:</strong> All purchased fuel is used in your business, vehicles, and equipment with complete visibility.</li>
+                    <li><strong>Labor Savings:</strong> Keep employees on-site and productive. No more trips to fuel up at service stations.</li>
+                    <li><strong>Simplified Accounting:</strong> One invoice per delivery reconciled to a monthly statement eliminates ticket management.</li>
+                    <li><strong>Increased Production:</strong> Save an average of 15 minutes per driver per day—that's 60 hours of production annually per driver.</li>
+                    <li><strong>Consistent Quality:</strong> Achieve optimal fleet performance with controlled, uniform fuel quality.</li>
+                    <li><strong>Reduced Cost:</strong> Annual savings of several thousand dollars when accounting for all operational benefits plus our competitive pricing.</li>
+                </ol>
+            </div>
+
+            <p style="font-style: italic; font-weight: bold; margin-top: 1.5rem;">
+                Let Ranparr, Inc. design a TCEQ-compliant fuel system to meet your individual requirements. All plans are permitted before installation and meet or exceed local fire department codes.
+            </p>
+
+            <h3>Equipment Division</h3>
+            <p>
+                Ranparr, Inc. is pleased to have introduced the vaulted aboveground protected tank to the Dallas-Fort Worth market in 1993. In fact, we placed the first protected tanks in the State of Texas! Our first tanks were manufactured in California in accordance with the strict standards of the California Air Resources Board (C.A.R.B.). Today, our tanks are made right here in the DFW metroplex—right here in Texas!
+            </p>
+
+            <h4 style="color: #d32f2f; margin-top: 1rem; margin-bottom: 0.5rem;">Our Expertise:</h4>
+            <div class="info-box">
+                <p>
+                    Since 1993, Ranparr, Inc. has installed hundreds of aboveground protected tanks. Our dedicated staff is ready to meet your demands with comprehensive services:
+                </p>
+                <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                    <li>Initial permit acquisition</li>
+                    <li>Professional fuel system installation</li>
+                    <li>TCEQ registration processing</li>
+                    <li>Experience with over 40 municipal fire marshals</li>
+                    <li>30+ years of proven expertise in tank installation</li>
+                </ul>
+            </div>
+
+            <h4 style="color: #d32f2f; margin-top: 1rem; margin-bottom: 0.5rem;">Tank Capacity Options:</h4>
+            <p>
+                We have aboveground tanks for every need, ranging from <strong>500 gallons to 12,000 gallons</strong>. We do not install underground tanks—our aboveground solutions are superior, compliant, and built to last.
+            </p>
+
+            <p style="margin-top: 1.5rem; padding: 1rem; background-color: #f5f5f5; border-left: 4px solid #d32f2f; border-radius: 4px; font-weight: bold;">
+                We have done it longer than anyone else, and we do it right! Call us today to discuss your equipment needs.
+            </p>
 
             <h3>Custom Solutions</h3>
             <p>
@@ -566,6 +676,36 @@
                     <h3>Employment Application</h3>
                     <p>Apply to join the Ranparr team with our employment application form.</p>
                     <a href="https://ranparr.com/wordpress/forms/Employment-Form.pdf" target="_blank">Download PDF</a>
+                </div>
+            </div>
+
+            <h3>Helpful Resources & Links</h3>
+            <p>
+                Check out these industry resources and partner websites that support our operations:
+            </p>
+            <div class="forms-grid">
+                <div class="form-card">
+                    <h3>Texas Commission on Environmental Quality</h3>
+                    <p>State environmental quality regulations and compliance information.</p>
+                    <a href="http://www.tceq.texas.gov/" target="_blank">Visit TCEQ</a>
+                </div>
+
+                <div class="form-card">
+                    <h3>Federated Insurance Company</h3>
+                    <p>Insurance solutions for fuel operations and fleet management.</p>
+                    <a href="http://www.federatedinsurance.com/" target="_blank">Visit Federated Insurance</a>
+                </div>
+
+                <div class="form-card">
+                    <h3>DFW New Car Dealers Association</h3>
+                    <p>Industry association supporting automotive dealers in Dallas/Fort Worth.</p>
+                    <a href="http://www.dfwncda.com/" target="_blank">Visit DFWNCDA</a>
+                </div>
+
+                <div class="form-card">
+                    <h3>Modern Welding Company</h3>
+                    <p>Fireguard UL-2085 aboveground storage tanks.</p>
+                    <a href="http://www.modweldco.com/" target="_blank">Visit Modern Welding</a>
                 </div>
             </div>
         </section>
