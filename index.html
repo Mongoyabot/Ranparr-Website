@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranparr, Inc. - Quality Fuel Solutions Since 1923</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Main Content */
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 2rem 0;
+            background-color: white;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h2 {
+            color: #d32f2f;
+            font-size: 32px;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #d32f2f;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #d32f2f;
+            font-size: 20px;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .info-box {
+            background-color: #f5f5f5;
+            border-left: 4px solid #d32f2f;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info div {
+            background-color: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .contact-info h3 {
+            color: #d32f2f;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 600px;
+            margin: 2rem 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #d32f2f;
+            box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            background-color: #d32f2f;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .service-card {
+            background-color: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 4px;
+            border-top: 4px solid #d32f2f;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: #d32f2f;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        /* Forms Section */
+        .forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .form-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #d32f2f;
+        }
+
+        .form-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .form-card h3 {
+            color: #d32f2f;
+            margin-bottom: 1rem;
+            font-size: 18px;
+        }
+
+        .form-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #d32f2f;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-card a:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-content div {
+            padding: 0 1rem;
+        }
+
+        .footer-content h4 {
+            color: #d32f2f;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 1rem;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">Ranparr, Inc.</div>
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="showSection('home'); return false;">Home</a></li>
+                        <li><a href="#" onclick="showSection('about'); return false;">About Us</a></li>
+                        <li><a href="#" onclick="showSection('operations'); return false;">Operations</a></li>
+                        <li><a href="#" onclick="showSection('forms'); return false;">Forms</a></li>
+                        <li><a href="#" onclick="showSection('gallery'); return false;">Photo Gallery</a></li>
+                        <li><a href="#" onclick="showSection('contact'); return false;">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <div>
+                        <h1>SERVICE IS OUR<br>MIDDLE NAME</h1>
+                        <p>Quality Fuel Solutions for Dallas/Fort Worth Since 1923</p>
+                    </div>
+                    <img src="Custom-Banner.jpg" alt="Ranparr fuel tank truck" class="hero-image">
+                </div>
+            </div>
+
+            <p style="font-size: 18px; line-height: 1.8;">
+                Since 1923, the Parrott family has been a leading supplier of petroleum products to end users in the Dallas/Fort Worth metroplex, even before there was a "metroplex." At Ranparr, Inc., our focus is on being the best supplier of quality gasoline and diesel fuels with the best service possible.
+            </p>
+
+            <h2>What We Offer</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>🚗 Car Dealerships</h3>
+                    <p>Keep your inventory fueled and ready for customers.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🚛 Trucking Fleets</h3>
+                    <p>Reliable fuel for long-haul operations and daily routes.</p>
+                </div>
+                <div class="service-card">
+                    <h3>❄️ AC & Mechanical</h3>
+                    <p>Service vehicles fueled and ready to go.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔧 Plumbing Services</h3>
+                    <p>Keep your work trucks on the road.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🌱 Landscaping</h3>
+                    <p>Fuel for all your equipment needs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🏊 Pool Services</h3>
+                    <p>Mobile units fueled and scheduled.</p>
+                </div>
+                <div class="service-card">
+                    <h3>📦 Delivery Services</h3>
+                    <p>Keep your fleet moving efficiently.</p>
+                </div>
+                <div class="service-card">
+                    <h3>⚡ Electrical Contractors</h3>
+                    <p>Service trucks ready when you need them.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <p><strong>If you have a fleet, we have a solution for you.</strong> Come visit the website to see why "service" really is our middle name!</p>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="content-section">
+            <h2>About Ranparr, Inc.</h2>
+            
+            <p>
+                Since 1923, the Parrott family has been a leading supplier of petroleum products to end users in the Dallas/Fort Worth metroplex, even before there was a "metroplex."
+            </p>
+
+            <h3>Our Mission</h3>
+            <p>
+                At Ranparr, Inc., our focus is on being the best supplier of quality gasoline and diesel fuels with the best service possible. We are committed to reliability, quality, and customer satisfaction in every transaction.
+            </p>
+
+            <h3>Why Choose Us?</h3>
+            <div class="info-box">
+                <ul style="margin-left: 1.5rem;">
+                    <li>100+ years of industry experience and family tradition</li>
+                    <li>Dedicated to quality gasoline and diesel fuels</li>
+                    <li>Exceptional customer service across DFW</li>
+                    <li>Solutions tailored to your fleet's specific needs</li>
+                    <li>Reliable, consistent supply you can count on</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Operations Section -->
+        <section id="operations" class="content-section">
+            <h2>Our Operations</h2>
+            
+            <p>
+                Ranparr, Inc. operates two convenient locations in the Dallas area to serve your fuel needs efficiently and professionally.
+            </p>
+
+            <h3>Industries We Serve</h3>
+            <p>
+                We proudly serve a diverse range of industries throughout the Dallas/Fort Worth metroplex:
+            </p>
+            <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                <li style="padding: 1rem; background: #f5f5f5; border-left: 4px solid #d32f2f; border-radius: 4px;"><strong>🚗 Car Dealerships</strong> - Keep your inventory fueled and ready</li>
+                <li style="padding: 1rem; background: #f5f5f5; border-left: 4px solid #d32f2f; border-radius: 4px;"><strong>🚛 Trucking Fleets</strong> - Reliable fuel for long-haul operations</li>
+                <li style="padding: 1rem; background: #f5f5f5; border-left: 4px solid #d32f2f; border-radius: 4px;"><strong>❄️ AC & Mechanical</strong> - Service vehicles fueled and ready to go</li>
+                <li style="padding: 1rem; background: #f5f5f5; border-left: 4px solid #d32f2f; border-radius: 4px;"><strong>🔧 Plumbing Services</strong> - Keep your work trucks on the road</li>
+                <li style="padding: 1rem; background: #f5f5f5; border-left: 4px solid #d32f2f; border-radius: 4px;"><strong>🌱 Landscaping</strong> - Fuel for all your equipment needs</li>
+                <li style="padding: 1rem; background: #f5f5f5; border-left: 4px solid #d32f2f; border-radius: 4px;"><strong>🏊 Pool Services</strong> - Mobile units fueled and scheduled</li>
+                <li style="padding: 1rem; background: #f5f5f5; border-left: 4px solid #d32f2f; border-radius: 4px;"><strong>📦 Delivery Services</strong> - Keep your fleet moving efficiently</li>
+                <li style="padding: 1rem; background: #f5f5f5; border-left: 4px solid #d32f2f; border-radius: 4px;"><strong>⚡ Electrical Contractors</strong> - Service trucks ready when you need them</li>
+            </ul>
+            <p style="margin-top: 1.5rem;">
+                Whether you operate a small fleet or manage a large operation, we have the capacity and expertise to meet your fuel supply needs.
+            </p>
+
+            <h3>Quality Assurance</h3>
+            <div class="info-box">
+                <p>
+                    Our commitment to quality means you receive premium gasoline and diesel fuels that keep your fleet running efficiently. We maintain strict quality standards and reliable delivery schedules to minimize downtime for your operations.
+                </p>
+            </div>
+
+            <h3>Custom Solutions</h3>
+            <p>
+                Every fleet is different. We work with you to develop fuel supply solutions that fit your specific operational needs, delivery schedules, and business goals. Contact us to discuss how we can serve your organization.
+            </p>
+        </section>
+
+        <!-- Forms Section -->
+        <section id="forms" class="content-section">
+            <h2>Forms & Applications</h2>
+            
+            <p>
+                Download the forms you need for credit applications, tank registrations, tax-free diesel permits, and employment opportunities.
+            </p>
+
+            <div class="forms-grid">
+                <div class="form-card">
+                    <h3>Credit Application</h3>
+                    <p>Ranparr, Inc. Credit Application for new customers.</p>
+                    <a href="https://ranparr.com/wordpress/forms/Ranparr-Credit-Application.pdf" target="_blank">Download PDF</a>
+                </div>
+
+                <div class="form-card">
+                    <h3>Aboveground Tank Registration</h3>
+                    <p>Registration form for aboveground fuel storage tanks.</p>
+                    <a href="https://ranparr.com/wordpress/forms/Aboveground-Registration.pdf" target="_blank">Download PDF</a>
+                </div>
+
+                <div class="form-card">
+                    <h3>Underground Tank Registration</h3>
+                    <p>Registration form for underground fuel storage tanks.</p>
+                    <a href="https://ranparr.com/wordpress/forms/Underground-Registration.pdf" target="_blank">Download PDF</a>
+                </div>
+
+                <div class="form-card">
+                    <h3>Tax-Free Dyed-Diesel Application</h3>
+                    <p>Texas Application for Tax-Free Dyed-Diesel Number.</p>
+                    <a href="https://ranparr.com/wordpress/forms/Dyed-Diesel-Form.pdf" target="_blank">Download PDF</a>
+                </div>
+
+                <div class="form-card">
+                    <h3>Tax-Free Diesel Statement</h3>
+                    <p>Texas Signed Statement for Tax-Free Dyed-Diesel Fuel.</p>
+                    <a href="https://ranparr.com/wordpress/forms/Dyed-Diesel-Statement.pdf" target="_blank">Download PDF</a>
+                </div>
+
+                <div class="form-card">
+                    <h3>Fuel Tax Refund Form</h3>
+                    <p>Texas Fuel Tax Refund Form for eligible purchases.</p>
+                    <a href="https://ranparr.com/wordpress/forms/Fuel-Refund-Form.pdf" target="_blank">Download PDF</a>
+                </div>
+
+                <div class="form-card">
+                    <h3>Employment Application</h3>
+                    <p>Apply to join the Ranparr team with our employment application form.</p>
+                    <a href="https://ranparr.com/wordpress/forms/Employment-Form.pdf" target="_blank">Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallery" class="content-section">
+            <h2>Photo Gallery</h2>
+            
+            <p>
+                A showcase of our operations, equipment, and satisfied customers throughout Dallas/Fort Worth.
+            </p>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="Freeman-Toyota-01.jpg" alt="Freeman Toyota">
+                </div>
+                <div class="gallery-item">
+                    <img src="Riddell-Plumbing-2.jpg" alt="Riddell Plumbing">
+                </div>
+                <div class="gallery-item">
+                    <img src="Stonebriar-Chevrolet.jpg" alt="Stonebriar Chevrolet">
+                </div>
+                <div class="gallery-item">
+                    <img src="Tank-Delivery.jpg" alt="Tank Delivery">
+                </div>
+                <div class="gallery-item">
+                    <img src="Crane-Holding-Tank.jpg" alt="Crane with Fuel Tank">
+                </div>
+                <div class="gallery-item">
+                    <img src="Tank-on-Pad.jpg" alt="Tank on Pad">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2133.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2134.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2135.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2136.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2137.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2138.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2139.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2140.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2141.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2142.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2143.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2144.jpg" alt="Operations">
+                </div>
+                <div class="gallery-item">
+                    <img src="DSC_2147-30-Key.jpg" alt="30 Key">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="content-section">
+            <h2>Contact Us</h2>
+            
+            <p>
+                Ready to discuss fuel solutions for your fleet? Reach out to us today. We're here to help!
+            </p>
+
+            <div class="contact-info">
+                <div>
+                    <h3>📞 Phone</h3>
+                    <p>(214) 496-9898</p>
+                    <p><strong>Fax:</strong> (214) 496-0882</p>
+                </div>
+                <div>
+                    <h3>📍 Locations</h3>
+                    <p><strong>Main Office:</strong><br>P.O. Box 541988<br>Dallas, TX 75354-1988</p>
+                    <p><strong>Operations:</strong><br>10207 Gardner Rd.<br>Dallas, TX 75220</p>
+                </div>
+            </div>
+
+            <h3>Send us a Message</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+                <p id="formStatus" style="margin-top: 1rem; color: #d32f2f; display: none;"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Ranparr, Inc.</h4>
+                    <p>Quality fuel solutions for Dallas/Fort Worth since 1923.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#" onclick="showSection('home'); return false;" style="color: white; text-decoration: none;">Home</a></li>
+                        <li><a href="#" onclick="showSection('about'); return false;" style="color: white; text-decoration: none;">About Us</a></li>
+                        <li><a href="#" onclick="showSection('operations'); return false;" style="color: white; text-decoration: none;">Operations</a></li>
+                        <li><a href="#" onclick="showSection('gallery'); return false;" style="color: white; text-decoration: none;">Photo Gallery</a></li>
+                        <li><a href="#" onclick="showSection('contact'); return false;" style="color: white; text-decoration: none;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <p>📞 (214) 496-9898<br>
+                    P.O. Box 541988<br>
+                    Dallas, TX 75354-1988</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ranparr, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                message: document.getElementById('message').value
+            };
+
+            // Send to Formspree (you'll need to set up the form endpoint)
+            fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('formStatus').textContent = '✓ Thank you! Your message has been sent successfully.';
+                    document.getElementById('formStatus').style.color = '#4caf50';
+                    document.getElementById('formStatus').style.display = 'block';
+                    document.getElementById('contactForm').reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                document.getElementById('formStatus').textContent = '✗ There was an error sending your message. Please try again.';
+                document.getElementById('formStatus').style.display = 'block';
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
